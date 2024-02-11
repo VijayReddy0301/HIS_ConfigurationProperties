@@ -1,0 +1,29 @@
+server:
+  port: 9090
+  
+spring:  
+  boot:
+    admin:
+      client:
+        url: http://localhost:2222
+  datasource:
+    url: http://localhost:3306/HIS
+    username: root
+    password: Vij@y0301
+    
+   
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      
+    show-sql: true
+    
+
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
